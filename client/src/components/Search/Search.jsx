@@ -21,13 +21,11 @@ const Search = () => {
 	return (
 		<StyledSearch>
 			<div className='dark-mode'>
-				<i class='fas fa-search'></i>
 				<input
 					type='text'
 					placeholder='Buscar País...'
 					onChange={(e) => handleChange(e)}
 				></input>
-				<i class='fas fa-times close'></i>
 			</div>
 		</StyledSearch>
 	);

@@ -9,10 +9,7 @@ export const StyledSearch = styled.div`
 	.ti {
 		color: var(--gray);
 	}
-	i {
-		margin-right: 1em;
-		color: var(--gray);
-	}
+	
 	input {
 		color: var(--gray);
 		background: #004D40 ;
