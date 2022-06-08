@@ -21,12 +21,12 @@ const Home = () => {
 	const loading = useSelector((e) => e.loading); //estados "globales"
 	const activities = useSelector((e) => e.activities); //estados "globales"
 	const [currentPage, setCurrentPage] = useState(1);
-	const [couPerPage] = useState(9);
+	const [couPerPage] = useState(10);
 	const indexlast = currentPage * couPerPage;
 	const indexFirst = indexlast - couPerPage;
 	const allpages = countries.slice(indexFirst, indexlast);
-	const [ setOrderName] = useState('');
-	const [ setOrderPopulation] = useState('');
+	const [orderName, setOrderName] = useState('');
+	const [orderPopulation, setOrderPopulation] = useState('');
 
 	const handleOrderN = (e) => {
 		e.preventDefault();
@@ -70,7 +70,7 @@ const Home = () => {
 				</select>
 
 				<select onChange={(e) => handleOrderN(e)}>
-					<option value='Asc'>Ordenadar por Asc-Des</option>
+					<option value='Asc'>Ordenadar País Asc-Des</option>
 					<option value='Asc'>Asc</option>
 					<option value='Des'>Des</option>
 				</select>

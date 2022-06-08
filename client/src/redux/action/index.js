@@ -21,6 +21,7 @@ export const getAllActivities = () => {
 };
 
 export const getAllCountries = () => {
+	// try{
 	return async (dispatch) => {
 		const { data } = await axios('http://localhost:3001/countries');
 		return dispatch({
@@ -28,6 +29,11 @@ export const getAllCountries = () => {
 			payload: data,
 		});
 	};
+// }
+// catch(error){
+// 	alert('Country Not Found');
+// 	console.log(error)
+// }
 };
 
 export const getDetail = (id) => {
@@ -41,21 +47,18 @@ export const getDetail = (id) => {
 };
 
 export const getCoutryName = (payload) => {
-	// try {
 		return async (dispatch) => {
-			const { data } = await axios(
-				`http://localhost:3001/countries?name=${payload}`
-			);
-
-			return dispatch({
-				type: SEARCH,
-				payload: data,
+		
+			const { data } = await axios(`http://localhost:3001/countries?name=${payload}`);
+				return dispatch({
+					type: SEARCH,
+					payload: data,
 			});
 		};
-	// } catch (error) {
-	// 	console.log(error);
-	// }
 };
+
+
+
 // return dispatch({
 //   type: SEARCH,
 //   payload:error,

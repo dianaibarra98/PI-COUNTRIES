@@ -37,8 +37,8 @@ box-sizing:border-box;
 @media (prefers-color-scheme: dark) {
   :root {
     --black: white;
-    --white: #284227;;
-    --background: #e4131d;
+    --white: #284227;
+    --background: #284227;
     --cardGray: #252b43;
     --baseBackground: #1d291e;
     --baseColor: white;

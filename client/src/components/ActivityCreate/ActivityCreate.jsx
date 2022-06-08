@@ -69,12 +69,6 @@ const ActivityCreate = () => {
 		});
 	};
 
-	const deleteActivity = (id) => {
-		setInput({
-			...input,
-			countriesId: input.countriesId.filter((t) => t !== id),
-		});
-	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -189,16 +183,7 @@ const ActivityCreate = () => {
 							))}
 						</select>
 					</div>
-					<ul>
-						{input.countriesId.map((e) => (
-							<li>
-								{e}{' '}
-								<button className='delete' onClick={() => deleteActivity(e)}>
-									<i className='fas fa-times'></i>
-								</button>{' '}
-							</li>
-						))}
-					</ul>
+					
 
 					<button className='submit' type='submit'>
 						Create Activities

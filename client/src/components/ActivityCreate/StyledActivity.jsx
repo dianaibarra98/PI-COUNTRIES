@@ -20,14 +20,7 @@ p {
         color: red;
     }
 }
-.delete {
-    background: #ed6969;
-    border-radius: 15px;
-    i {
-        color: red;
-       
-    }
-}
+
 input {
     font-size: 15px;
     margin: 20px; 
