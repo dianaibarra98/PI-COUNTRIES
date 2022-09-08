@@ -48,6 +48,7 @@ const Home = () => {
 
 	const handleContinents = (e) => {
 		dispatch(byContinents(e.target.value));
+		setCurrentPage(1)
 	};
 
 	const handleByActivity = (e) => {
